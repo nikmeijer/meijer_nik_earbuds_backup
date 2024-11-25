@@ -1,0 +1,65 @@
+#xray-con {
+    height: 75%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#xray-con h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#outerShell {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    #mobile-tablet-view {
+        display: none;
+    }
+
+    #outerShell {
+        display: block;
+        max-width: 1200px;
+        margin: auto;
+        border: solid 1px #666;
+    }
+
+    #imageCon {
+        position: relative;
+        max-width: 1200px;
+        height: 90vh;
+    }
+
+    .slideImage {
+        position: absolute;
+        /*images are stacked in order via absolute*/
+        left: 0;
+        right: 0;
+        height: 90vh;
+    }
+
+    .image-right {
+        background: url(../images/bud-xray.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .image-left {
+        background: url(../images/bud-non-xray.jpg) no-repeat;
+        width: 50%;
+        /*start the image at the halfway point*/
+        background-size: cover;
+    }
+
+    .image-drag {
+        background-color: #666;
+        left: 50%;
+        /*match up with image left*/
+        width: 4px;
+        /*orig 49*/
+        cursor: pointer;
+    }
+}

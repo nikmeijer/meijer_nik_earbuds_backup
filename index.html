@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Loop Pods</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/main.css" rel="stylesheet" />
+  <link href="css/grid.css" rel="stylesheet" />
+  <link href="css/reset.css" rel="stylesheet" />
+  <!-- link to greensock main library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+</head>
+
+<body>
+  <!--Nav Start-->
+  <header class="grid-con">
+    <h1 class="hidden">Header</h1>
+    <div id="logo-con" class="col-span-3 m-col-span-4 l-col-span-4 xl-col-span-4">
+      <img id="looppods-logo" src="images/looppods-logo.svg" alt="looppods logo">
+    </div>
+    <nav class="tablet desktop m-col-span-8 l-col-span-8 xl-col-span-8">
+      <ul>
+        <li><a href="#">About Sonolink</a></li>
+        <li><a href="#">Shop</a></li>
+      </ul>
+    </nav>
+
+    <div id="mobile-nav" class="mobile col-span-1">
+      <input type="checkbox" id="overlay-input">
+      <label for="overlay-input" id="overlay-button"><span></span></label>
+      <div id="overlay">
+        <ul>
+          <li><a href="#">About Sonolink</a>
+          </li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!--Nav End-->
+
+  <!--Scrolling Animation Start-->
+
+  <!-- FILE SIZES TOO BIG WITH PNG, TRYING VIDEO
+  <section class="full-width-grid-con">
+    <section class="hero-con col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+      <canvas id="explode-view"></canvas>
+    </section>
+  </section>
+  -->
+
+  <section class="full-width-grid-con">
+    <section class="hero-con col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+
+      <!--Source: https://codepen.io/wisearts/pen/ExZGrbZ-->
+      <video class="video" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted">
+        <source src="images/meijer_nik_earbuds_vid.mp4" type="video/mp4" />
+      </video>
+
+    </section>
+  </section>
+
+  <!--Scrolling Animation End-->
+
+  <main class="grid-con">
+
+    <!--Model Viewer Start-->
+    <section id="model-viewer-con" class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+      <h2>See the NEW Loop Pods in AR</h2>
+      <model-viewer src="model/earbud-model-view.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+        tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate
+        alt="Earbud Augmented-Reality Model Viewer">
+
+        <button class="Hotspot" slot="hotspot-1"
+          data-position="-327.1570628759146m 226.40249821158073m 405.15470083110824m"
+          data-normal="-0.4669653204286873m 0.6671407938819425m 0.5804020594859265m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+            <h2></h2>
+            <p></p>
+          </div>
+        </button>
+
+        <button class="Hotspot" slot="hotspot-2"
+          data-position="-401.04487171826986m 308.63190987413435m 281.1991813654062m"
+          data-normal="-0.6311718846278098m 0.7696041957015728m -0.09659934789590524m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+            <h2></h2>
+            <p></p>
+          </div>
+        </button>
+
+        <button class="Hotspot" slot="hotspot-4"
+          data-position="-269.3191255853149m 128.22054126709227m 159.01360673744875m"
+          data-normal="0m 3.4228542950295595e-8m -0.9999999999999994m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+            <h2></h2>
+            <p></p>
+          </div>
+        </button>
+
+        <button class="Hotspot" slot="hotspot-5"
+          data-position="-69.87662996793813m -8.372595796219173m 109.74953619139183m"
+          data-normal="1.734723475976807e-18m 3.422854295029559e-8m -0.9999999999999994m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+            <h2></h2>
+            <p></p>
+          </div>
+        </button>
+
+        <button class="Hotspot" slot="hotspot-6"
+          data-position="33.53910692227595m -93.87885956064994m 216.23923507896254m"
+          data-normal="-0.46703909504490704m 0.540945342102176m 0.6994659538230535m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+            <h2></h2>
+            <p></p>
+          </div>
+        </button>
+
+        <button class="Hotspot" slot="hotspot-7"
+          data-position="-116.3563288605707m 95.07584334546377m 447.8773503104569m"
+          data-normal="0.6005815416781833m -0.0145602433906723m 0.7994309295416716m"
+          data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">
+            <h2></h2>
+            <p></p>
+          </div>
+        </button>
+      </model-viewer>
+    </section>
+    <!--Model Viewer End-->
+
+    <!--X-ray view start-->
+    <section id="xray-con" class="col-span-full m-col-span-full l-col-span-full xl-col-span-full">
+      <h2>What's inside?</h2>
+      <div class="col-span-full">
+        <div id="mobile-tablet-view">
+          <img src="../images/bud-xray.jpg" alt="X ray view of ear bud">
+          <img src="../images/bud-non-xray.jpg" alt="Regular view of ear bud">
+        </div>
+        <div id="outerShell">
+          <div id="imageCon">
+            <div class="slideImage image-right"></div> <!-- wire version -->
+            <div class="slideImage image-left"></div> <!-- actual earbuds -->
+            <div class="slideImage image-drag"></div> <!-- div to create black bar -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--X-ray view end-->
+
+  </main>
+
+  <footer>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Loads <model-viewer> for browsers: -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
